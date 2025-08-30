@@ -1,21 +1,23 @@
-# Define a imagem base do Python que vamos usar
+# Usa uma imagem base minimalista do Python 3.9
 FROM python:3.9-slim
 
-# Cria e define o diretório de trabalho dentro do container
+# Define o diretório de trabalho dentro do container como /app
 WORKDIR /app
 
-# Copia o arquivo de dependências para dentro do container
+# Copia o arquivo de dependências para o container
 COPY requirements.txt .
 
-# Instala as dependências listadas no requirements.txt
+# Instala as dependências do projeto sem usar o cache do pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia todo o resto do seu código (app.py, templates/, etc.) para o container
+# Define uma variável de ambiente para o cache do Hugging Face em um diretório gravável
+ENV HF_HOME=/tmp/hf_cache
+
+# Copia todos os arquivos do projeto para o diretório de trabalho no container
 COPY . .
 
-# Expõe a porta que a aplicação vai usar. O Hugging Face usa a 7860 por padrão.
+# Expõe a porta 7860 (usada por Gradio, Streamlit ou apps web)
 EXPOSE 7860
 
-# O comando que será executado quando o container iniciar.
-# Usamos o Gunicorn para rodar nosso app Flask.
+# Comando para iniciar o servidor Gunicorn, ouvindo na porta 7860, usando o objeto 'app' do arquivo app.py
 CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app:app"]

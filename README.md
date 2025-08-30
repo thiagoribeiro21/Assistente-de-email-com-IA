@@ -70,8 +70,8 @@ Acesse a versão pública do projeto:
 
 ## Screenshots
 
-<img src="static/images/screenshot-form.png" alt="Formulário de análise de email" width="400">
-<img src="static/images/screenshot-resultado.png" alt="Resultado da análise" width="400">
+<img src="static/images/screenshot-home.png" alt="Formulário de análise de email" width="400">
+<img src="static/images/screenshot-response.png" alt="Resultado da análise" width="400">
 
 ---
 
@@ -119,7 +119,7 @@ Depois, acesse [http://localhost:7860](http://localhost:7860)
 
 ## Aprendizados
 
-Este projeto proporcionou experiência prática com integração de IA em aplicações web, manipulação de arquivos PDF e TXT, além de reforçar conceitos de responsividade e boas práticas em Flask, Docker e deploy em produção.
+Esse projeto marcou minha transição para o desenvolvimento full-stack. Nele, criei uma aplicação web completa do zero: construí um backend em Python com Flask e integrei um modelo de Processamento de Linguagem Natural (PNL) da Hugging Face para classificar textos de diferentes fontes, como entradas diretas, arquivos .txt e .pdf. Além da parte de programação, cuidei de todo o ciclo de vida da aplicação, desde a conteinerização com Docker até o deploy em nuvem. Foi uma experiência prática que consolidou minha capacidade de levar uma solução de IA do papel para a produção.
 
 ---
 
