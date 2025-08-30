@@ -1,4 +1,4 @@
-<img src="static/images/e-mail%20(1).png" alt="Logo do Projeto">
+<img src="static/images/e-mail%20(1).png" alt="Logo do Projeto" width="120">
 
 # Assistente de Email com IA
 
@@ -72,3 +72,42 @@ Siga os passos abaixo para rodar o projeto localmente:
 ```bash
 git clone https://github.com/thiagoribeiro21/autoU.git
 ```
+
+### 2. Instale as dependências
+
+Recomenda-se o uso de um ambiente virtual:
+
+```bash
+cd autoU
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 3. Execute o servidor Flask
+
+```bash
+python app.py
+```
+
+Acesse em [http://localhost:5000](http://localhost:5000)
+
+## Aprendizados
+
+Este projeto proporcionou experiência prática com integração de IA em aplicações web, manipulação de arquivos PDF e TXT, além de reforçar conceitos de responsividade e boas práticas em Flask.
+
+---
+
+## 👨‍💻 Autor
+
+Feito por **Thiago Ribeiro**
+
+- **LinkedIn:** https://www.linkedin.com/in/thiagorib21
+- **Email:** thiago.ribeiro2003@hotmail.com
+- **GitHub:** https://github.com/thiagoribeiro21
+
+---
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
