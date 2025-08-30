@@ -18,7 +18,7 @@ Principais características:
 - **Interface Responsiva:** Desenvolvida com HTML5, CSS3 e JavaScript.
 - **Backend em Python:** Utiliza Flask para servir a aplicação e processar as requisições.
 - **Deploy com Docker e Gunicorn:** Pronto para rodar em containers e ambientes de produção.
-- **Deploy público:** Disponível em [https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/)
+- **Deploy público:** Disponível em [https://thiago-ribeiro-21-assistente-de-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-de-email-com-ia.hf.space/)
 
 ---
 
@@ -44,7 +44,7 @@ Principais características:
 ## ✨ Deploy Online
 
 Acesse a versão pública do projeto:  
-🔗 [https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/)
+🔗 [https://thiago-ribeiro-21-assistente-de-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-de-email-com-ia.hf.space/)
 
 ---
 
