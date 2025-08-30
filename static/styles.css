@@ -1,0 +1,257 @@
+/* Reset de box-sizing e margens/paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo geral do body, fonte, alinhamento e fundo animado */
+body {
+  font-family: "Inter", "Roboto", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #ffe4c4, #060638, #176d8d, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+
+/* Container centralizado com fundo escuro e bordas arredondadas */
+.container {
+  max-width: 700px;
+  margin: 20px;
+  background: rgba(26, 32, 44, 0.85);
+  color: rgb(218, 216, 216);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+/* Título principal */
+h1 {
+  color: white;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: "Lexend", sans-serif;
+  border-bottom: 1px solid #3182ce;
+}
+
+/* Formulário centralizado em coluna */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Inter ", "Roboto", sans-serif;
+  /* Espaçamento para parágrafos dentro do form */
+  p {
+    margin-top: 10px;
+  }
+}
+
+/* Área de texto para o email */
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #edf2f7;
+  font-size: 1rem;
+  max-height: 100px;
+  font-family: "Inter", "Roboto", sans-serif;
+}
+
+/* Input de arquivo com botão customizado */
+input[type="file"] {
+  padding: 10px;
+  padding-left: 3px;
+  border-radius: 5px;
+
+  /* Botão do seletor de arquivo */
+  &::file-selector-button {
+    background-color: #3182ce;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+  }
+  /* Hover no botão do seletor de arquivo */
+  &:hover::file-selector-button {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+  /* Foco visível no input de arquivo */
+  &:focus-visible {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    outline: none;
+    &::file-selector-button {
+      outline: 1px solid white;
+      outline-offset: 2px;
+    }
+  }
+}
+
+/* Botão de envio do formulário */
+button {
+  padding: 12px 20px;
+  margin-left: 3px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Foco visível no botão */
+  &:focus-visible {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* Efeito hover no botão */
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Área de resultados, inicialmente escondida */
+#results {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #3182ce;
+  font-family: "Inter", "Roboto", sans-serif;
+  display: none;
+
+  /* Estilo para textos e títulos dentro dos resultados */
+  p strong,
+  h2,
+  h3 {
+    font-family: "Lexend", sans-serif;
+    letter-spacing: 1px;
+  }
+  p strong {
+    display: block;
+  }
+  p,
+  h2,
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* Caixa de sugestão de resposta */
+  pre {
+    white-space: pre-wrap;
+    background: #edf2f7;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+  }
+}
+
+/* Título dos resultados */
+#results h2 {
+  margin-top: 0;
+}
+
+/* Spinner de carregamento */
+#spinner {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+/* Linha de informações dos resultados */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Loader animado */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* Texto menor */
+.little {
+  font-size: 0.8rem;
+  color: rgb(177, 176, 176);
+}
+
+/* Animação do loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animação do gradiente de fundo */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsividade para telas maiores */
+@media screen and (width >= 35.5em) {
+  .container {
+    padding: 40px;
+  }
+  button {
+    font-size: 1.2rem;
+  }
+  .loader {
+    width: 50px;
+    height: 50px;
+  }
+  .little {
+    font-size: 1rem;
+  }
+  h1 {
+    padding-bottom: 20px;
+    text-wrap: nowrap;
+  }
+  #results {
+    padding-top: 15px;
+  }
+  form p {
+    margin-top: 20px;
+  }
+  form p,
+  label {
+    font-size: 1.2rem;
+  }
+  input[type="file"]::file-selector-button {
+    font-size: 1.1rem;
+  }
+  .row {
+    justify-content: initial;
+    gap: 3rem;
+    font-size: 1.2rem;
+  }
+  pre {
+    font-size: 1rem;
+  }
+}

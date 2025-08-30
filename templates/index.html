@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistente de Emails com IA</title>
+    <!-- Importa o CSS principal -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <!-- Otimiza carregamento de fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Importa as fontes utilizadas no projeto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícone da página (favicon) -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/e-mail (1).png') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- Div para centralização flexível (pode ser usada para layout) -->
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+
+    <!-- Container principal do conteúdo -->
+    <div class="container">
+      <!-- Título da aplicação -->
+      <h1>Assistente de Email com IA</h1>
+      <!-- Formulário para envio de texto ou arquivo -->
+      <form id="emailForm">
+        <p>Cole o texto do email abaixo:</p>
+        <textarea
+          id="emailText"
+          rows="10"
+          placeholder="Digite aqui seu texto..."
+        ></textarea>
+        <label for="emailFile"
+          >Ou envie um arquivo
+          <span class="little">(.txt ou .pdf)</span>:</label
+        >
+        <input
+          type="file"
+          id="emailFile"
+          name="email_file"
+          accept=".txt,.pdf"
+        />
+        <button type="submit">Analisar Email</button>
+      </form>
+
+      <!-- Spinner de carregamento (aparece durante a análise) -->
+      <div id="spinner">
+        <div class="loader"></div>
+        <p>Analisando... Isso pode levar alguns segundos.</p>
+      </div>
+
+      <!-- Área de exibição dos resultados da análise -->
+      <div id="results">
+        <h2>Resultado da Análise</h2>
+        <div class="row">
+          <p><strong>Categoria:</strong> <span id="category"></span></p>
+          <p>
+            <strong>Confiança:</strong>
+            <span id="confidence"></span>
+          </p>
+        </div>
+        <h3>Sugestão de Resposta:</h3>
+        <pre id="suggestedReply"></pre>
+      </div>
+          
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
