@@ -1,4 +1,4 @@
-<img src="static/images/e-mail%20(1).png" alt="Logo do Projeto" width="120">
+<img src="static/images/e-mail%20(2).png" alt="Logo do Projeto">
 
 # Assistente de Email com IA
 
@@ -17,6 +17,8 @@ Principais características:
 - **Upload de Arquivos:** Aceita arquivos `.txt` e `.pdf` para análise.
 - **Interface Responsiva:** Desenvolvida com HTML5, CSS3 e JavaScript.
 - **Backend em Python:** Utiliza Flask para servir a aplicação e processar as requisições.
+- **Deploy com Docker e Gunicorn:** Pronto para rodar em containers e ambientes de produção.
+- **Deploy público:** Disponível em [https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/)
 
 ---
 
@@ -24,7 +26,7 @@ Principais características:
 
 [![Licença](https://img.shields.io/badge/licença-MIT-blue)](./LICENSE)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Último Commit](https://img.shields.io/github/last-commit/thiagoribeiro21/autoU)
+![Último Commit](https://img.shields.io/github/last-commit/thiagoribeiro21/Assistente-de-email-com-IA)
 
 <br>
 
@@ -33,7 +35,16 @@ Principais características:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Python](https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/huggingface-yellow?style=for-the-badge&logo=huggingface&logoColor=black)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Gunicorn](https://img.shields.io/badge/gunicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white)
+![HuggingFace Spaces](https://img.shields.io/badge/HuggingFace%20Spaces-yellow?style=for-the-badge&logo=huggingface&logoColor=black)
+
+---
+
+## ✨ Deploy Online
+
+Acesse a versão pública do projeto:  
+🔗 [https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/](https://thiago-ribeiro-21-assistente-email-com-ia.hf.space/)
 
 ---
 
@@ -44,6 +55,7 @@ Principais características:
 - ✉️ **Sugestão de Resposta:** Receba uma resposta pronta para copiar e colar.
 - 📂 **Upload de Arquivos:** Suporte a `.txt` e `.pdf`.
 - 💻 **Interface Responsiva:** Visual moderno e adaptável a qualquer dispositivo.
+- 🐳 **Deploy com Docker:** Pronto para rodar em containers.
 
 ---
 
@@ -52,7 +64,7 @@ Principais características:
 **Front-end:** HTML5, CSS3, JavaScript  
 **Back-end:** Python, Flask  
 **IA:** Hugging Face Transformers (facebook/bart-large-mnli)  
-**Outros:** PyPDF2 (leitura de PDF)
+**Outros:** PyPDF2, Docker, Gunicorn
 
 ---
 
@@ -65,12 +77,10 @@ Principais características:
 
 ## ⚙️ Instalação e Execução Local
 
-Siga os passos abaixo para rodar o projeto localmente:
-
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/thiagoribeiro21/autoU.git
+git clone https://github.com/thiagoribeiro21/Assistente-de-email-com-IA.git
 ```
 
 ### 2. Instale as dependências
@@ -78,7 +88,7 @@ git clone https://github.com/thiagoribeiro21/autoU.git
 Recomenda-se o uso de um ambiente virtual:
 
 ```bash
-cd autoU
+cd Assistente-de-email-com-IA
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -90,11 +100,26 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Acesse em [http://localhost:5000](http://localhost:5000)
+Acesse em [http://localhost:5000](http://localhost:5000) ou [http://localhost:5001](http://localhost:5001) dependendo da porta configurada.
+
+---
+
+## 🐳 Rodando com Docker
+
+Você pode rodar o projeto em um container Docker facilmente:
+
+```bash
+docker build -t assistente-email-ia .
+docker run -p 7860:7860 assistente-email-ia
+```
+
+Depois, acesse [http://localhost:7860](http://localhost:7860)
+
+---
 
 ## Aprendizados
 
-Este projeto proporcionou experiência prática com integração de IA em aplicações web, manipulação de arquivos PDF e TXT, além de reforçar conceitos de responsividade e boas práticas em Flask.
+Este projeto proporcionou experiência prática com integração de IA em aplicações web, manipulação de arquivos PDF e TXT, além de reforçar conceitos de responsividade e boas práticas em Flask, Docker e deploy em produção.
 
 ---
 
