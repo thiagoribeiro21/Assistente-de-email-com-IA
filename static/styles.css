@@ -22,11 +22,11 @@ body {
 
 /* Container centralizado com fundo escuro e bordas arredondadas */
 .container {
-  max-width: 700px;
-  margin: 20px;
+  max-width: 43.75rem;
+  margin: 1.25rem;
   background: rgba(26, 32, 44, 0.85);
   color: rgb(218, 216, 216);
-  padding: 30px;
+  padding: 1.875rem;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
 }
@@ -34,8 +34,8 @@ body {
 /* Título principal */
 h1 {
   color: white;
-  padding-bottom: 10px;
-  letter-spacing: 1px;
+  padding-bottom: 0.625rem;
+  letter-spacing: 0.0625rem;
   font-family: "Lexend", sans-serif;
   border-bottom: 1px solid #3182ce;
   font-size: 1.8rem;
@@ -45,37 +45,37 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
   font-family: "Inter ", "Roboto", sans-serif;
   /* Espaçamento para parágrafos dentro do form */
   p {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 }
 
 /* Área de texto para o email */
 textarea {
-  padding: 10px;
+  padding: 0.625rem;
   border-radius: 5px;
   background-color: #edf2f7;
   font-size: 1rem;
-  max-height: 175px;
+  max-height: 10.9375rem;
   font-family: "Inter", "Roboto", sans-serif;
 }
 
 /* Input de arquivo com botão customizado */
 input[type="file"] {
-  padding: 10px;
-  padding-left: 3px;
+  padding: 0.625rem;
+  padding-left: 0.1875rem;
   border-radius: 5px;
 
   /* Botão do seletor de arquivo */
   &::file-selector-button {
     background-color: #3182ce;
     color: white;
-    padding: 15px;
+    padding: 0.9375rem;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     border: none;
   }
   /* Hover no botão do seletor de arquivo */
@@ -99,8 +99,8 @@ input[type="file"] {
 
 /* Botão de envio do formulário */
 button {
-  padding: 12px 20px;
-  margin-left: 3px;
+  padding: 0.75rem 1.25rem;
+  margin-left: 0.1875rem;
   background-color: #3182ce;
   color: white;
   border: none;
@@ -125,8 +125,8 @@ button:hover {
 
 /* Área de resultados, inicialmente escondida */
 #results {
-  margin-top: 40px;
-  padding-top: 20px;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid #3182ce;
   font-family: "Inter", "Roboto", sans-serif;
   display: none;
@@ -136,7 +136,7 @@ button:hover {
   h2,
   h3 {
     font-family: "Lexend", sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
   }
   p strong {
     display: block;
@@ -144,14 +144,14 @@ button:hover {
   p,
   h2,
   h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
   }
   /* Caixa de sugestão de resposta */
   pre {
     white-space: pre-wrap;
     background: #edf2f7;
-    padding: 10px;
+    padding: 1.25rem;
     border-radius: 5px;
     color: black;
   }
@@ -180,8 +180,8 @@ button:hover {
   border: 5px solid #f3f3f3;
   border-radius: 50%;
   border-top: 5px solid #3498db;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   animation: spin 2s linear infinite;
   margin: auto;
 }
@@ -218,27 +218,27 @@ button:hover {
 /* Responsividade para telas maiores */
 @media screen and (width >= 35.5em) {
   .container {
-    padding: 40px;
+    padding: 2.5rem;
   }
   button {
     font-size: 1.2rem;
   }
   .loader {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
   }
   .little {
     font-size: 1rem;
   }
   h1 {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     text-wrap: nowrap;
   }
   #results {
-    padding-top: 15px;
+    padding-top: 0.9375rem;
   }
   form p {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   form p,
   label {
